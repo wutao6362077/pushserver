@@ -1,0 +1,39 @@
+文件描述
+1、PMain.cpp 
+   调用RunServer.cpp中的函数，启动服务器程序，处理信号和重启系统
+2、RunServer.cpp
+   调用基础设施初始化代码，创建ZQPushServer对象开启服务器
+3、ZQPushServer.cpp
+   读取配置文件，开启服务器监听接口。启动服务器功能！
+4、PushListenerSocket.cpp PushSslListenerSocket.cpp MqttListenerSocket.cpp
+   端口监听类
+5、PushClientSession.cpp
+   rtk服务器连接会话类
+6、SslSvrSession.cpp
+   provider服务器连接会话类
+7、MqttServer.cpp
+   android设备端连接会话类
+8、HiredisLocation.cpp
+   redis客户端类，PushClientSession类使用
+9、MqttPacket.cpp
+   MQTT协议包封装类
+10、MqttClient.cpp
+   MQTT客户端封装类
+11、MqttSessionHandler.cpp
+   MQTT会话管理类，为SslSvrSession类提供查找发送推送数据的目的android客户端
+12、ProviderPacket.cpp类
+   APNs推送数据包封装类
+13、PushClientSocket.cpp
+   SslTcpSocket管理类。管理众多同APNs的连接
+14、PushConfigParser.cpp
+   管理配置类
+15、PushLogger.cpp
+   日志管理类
+16、TcpSslSessionInterface
+   SslSvrSession的基类。
+17、TcpSslInputStream.cpp
+   Ssl接收数据流类，被TcpSslSessionInterface使用。
+18、SslTcpClientSocket.cpp
+   Ssl接收数据类，被TcpSslInputStream类使用
+19、SslTcpSocket.cpp
+   Ssl发送数据类，被PushClientSocket管理。
