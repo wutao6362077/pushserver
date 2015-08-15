@@ -21,6 +21,6 @@ void ApsApnsPrimeryClient::OnPublish(ApsApnsPrimeryRequestMessage &publish)
 
 void ApsApnsPrimeryClient::OnResponse(StringParser *reqLine, StrPtrLen *content)
 {
-
+    return;
 }
 
